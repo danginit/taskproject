@@ -11,13 +11,15 @@
 Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
+  require 'devise/orm/active_record'
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '9b0821648272ab4d9ee26ff893957fd4c1aa746bbe4f8d4996805dddc5ea5b6fc4197bcda510e5e73bc394b0188c52abd31f58e4e34982f4bc246b66356e9bfe'
   # config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'public_profile,email'
-  # config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", callback_url: "http://localhost:3000/users/auth/facebook/callback"
-  config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", token_params: { parse: :json }
+  config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  # config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", token_params: { parse: :json }
+  config.omniauth :linkedin, "78udy7vdxud6p9", "19HJu6pHTdSaHn7e", callback_url: "http://localhost:3000/users/auth/linkedin/callback"
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -38,7 +40,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/active_record'
+  
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is

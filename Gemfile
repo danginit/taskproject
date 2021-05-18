@@ -27,9 +27,16 @@ gem 'dotenv-rails', :require => 'dotenv/rails-now'
 # Use Omniauth Facebook plugin
 gem 'omniauth-facebook'
 gem 'omniauth-rails_csrf_protection'
+
+# Use Omniauth Linkedin plugin
+gem "omniauth"
+gem "omniauth-linkedin-oauth2"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#use Omniauth spotify 
+# gem 'rspotify'
+gem 'activerecord-session_store'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

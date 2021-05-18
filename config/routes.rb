@@ -5,8 +5,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations',
     omniauth_callbacks: 'users/omniauth_callbacks'
+    
   }
-
+  
   resources :users do
     member do
       get :confirm_email
