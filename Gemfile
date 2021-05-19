@@ -35,8 +35,10 @@ gem "omniauth-linkedin-oauth2"
 # gem 'image_processing', '~> 1.2'
 
 #use Omniauth spotify 
-# gem 'rspotify'
+gem 'omniauth-spotify'
 gem 'activerecord-session_store'
+gem 'ngrok-tunnel'
+gem 'tty-box'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

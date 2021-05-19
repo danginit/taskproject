@@ -23,7 +23,7 @@ Devise.setup do |config|
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
-
+  config.omniauth :spotify, "20498203a9d14a308a4040c5c2b09c80", "2c741744365b49e39748c6b4a0a616e3", callback_url: "http://e9609b427a70.ngrok.io/users/auth/spotify/callback"
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
