@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  skip_before_action :verify_authenticity_token, :only => [:facebook, :linkedin, :spotify]
+  skip_before_action :verify_authenticity_token, :only => [:facebook, :linkedin, :spotify, :google_oauth2]
 
   def facebook
     # You need to implement the method below in your model (e.g. app/models/user.rb)
@@ -23,6 +23,17 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       set_flash_message(:notice, :success, kind: "Linkedin") if is_navigational_format?
     else
       session["devise.linkedin_data"] = request.env["omniauth.auth"].except(:extra) # Removing extra as it can overflow some session stores
+      redirect_to new_user_registration_url
+    end
+  end
+
+  def google_oauth2
+    @user = User.from_omniauth(request.env["omniauth.auth"])
+    if @user.persisted?
+      sign_in_and_redirect @user, event: :authentication
+      set_flash_message(:notice, :success, kind: "Google") if is_navigational_format?
+    else
+      session["devise.google_oauth2_data"] = request.env["omniauth.auth"].except(:extra) # Removing extra as it can overflow some session stores
       redirect_to new_user_registration_url
     end
   end

@@ -33,7 +33,7 @@ gem "omniauth"
 gem "omniauth-linkedin-oauth2"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'omniauth-google-oauth2'
 #use Omniauth spotify 
 gem 'omniauth-spotify'
 gem 'activerecord-session_store'
