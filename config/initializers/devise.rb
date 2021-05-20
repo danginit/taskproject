@@ -30,16 +30,16 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
 
 
-  config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", callback_url: "https://taskprojects.herokuapp.com/users/auth/facebook/callback"
+  config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", callback_url: "https://tasksprojects.herokuapp.com/users/auth/facebook/callback"
   # config.omniauth :facebook, "135761675263912", "51d81fdd3a883dfcd28e51e1b56b040b", token_params: { parse: :json }
-  config.omniauth :linkedin, "78udy7vdxud6p9", "19HJu6pHTdSaHn7e", callback_url: "https://taskprojects.herokuapp.com/users/auth/linkedin/callback"
+  config.omniauth :linkedin, "78udy7vdxud6p9", "19HJu6pHTdSaHn7e", callback_url: "https://tasksprojects.herokuapp.com/users/auth/linkedin/callback"
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
-  config.omniauth :spotify, "20498203a9d14a308a4040c5c2b09c80", "2c741744365b49e39748c6b4a0a616e3", callback_url: "https://taskprojects.herokuapp.com/users/auth/spotify/callback"
+  config.omniauth :spotify, "20498203a9d14a308a4040c5c2b09c80", "2c741744365b49e39748c6b4a0a616e3", callback_url: "https://tasksprojects.herokuapp.com/users/auth/spotify/callback"
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
-  config.omniauth :google_oauth2, "470761906177-ctmuthdbrcglglsh2hu7tik838q911ge.apps.googleusercontent.com", "fN6HpI3mRpXeMNOHIevLOXZL", callback_url: "https://taskprojects.herokuapp.com/users/auth/google_oauth2/callback"
+  config.omniauth :google_oauth2, "470761906177-ctmuthdbrcglglsh2hu7tik838q911ge.apps.googleusercontent.com", "fN6HpI3mRpXeMNOHIevLOXZL", callback_url: "https://tasksprojects.herokuapp.com/users/auth/google_oauth2/callback"
   # note that it will be overwritten if you use your own mailer class
 
 
