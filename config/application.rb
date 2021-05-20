@@ -11,7 +11,7 @@ module Taskproject
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     # config.hosts << "[a-z0-9]+\.ngrok\.io/"
-    config.hosts << "23bc68e65889.ngrok.io"
+    config.hosts << "tasksprojects.herokuapp.com"
     # RSpotify::authenticate("20498203a9d14a308a4040c5c2b09c80", "2c741744365b49e39748c6b4a0a616e3")
     # Configuration for the application, engines, and railties goes here.
     #
